@@ -1,0 +1,14 @@
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\bin\Debug\Verify-Your-Business.exe.config
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\bin\Debug\Verify-Your-Business.exe
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\bin\Debug\Verify-Your-Business.pdb
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business.csprojAssemblyReference.cache
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\MainWindow.g.cs
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\App.g.cs
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business_MarkupCompile.cache
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business_MarkupCompile.lref
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\MainWindow.baml
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business.g.resources
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify_Your_Business.Properties.Resources.resources
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business.csproj.GenerateResource.cache
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business.exe
+C:\Users\Przemysław Sakowski\Documents\Work\Verify-Your-Business\Verify-Your-Business\Verify-Your-Business\obj\Debug\Verify-Your-Business.pdb
