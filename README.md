@@ -4,11 +4,11 @@ Aplikacja "Verify Your Business" pozwala na określenie wiarygodności partneró
 
 ## Twórcy
 
--Przemysław Sakowski
+- Przemysław Sakowski
 
--Maksymilian Stępak
+- Maksymilian Stępak
 
--Szymon Ryczek
+- Szymon Ryczek
 
 ## Licencja
 
