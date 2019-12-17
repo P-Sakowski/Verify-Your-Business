@@ -24,5 +24,13 @@ namespace Verify_Your_Business
         {
             InitializeComponent();
         }
+
+        private void Search(object sender, RoutedEventArgs e)
+        {
+            // todo
+            string search1 = text_search.Text;
+            string search2 = date_search.Text;
+            MessageBox.Show(search2);
+        }
     }
 }
