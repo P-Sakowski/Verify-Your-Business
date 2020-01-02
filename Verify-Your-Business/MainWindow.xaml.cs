@@ -30,7 +30,8 @@ namespace Verify_Your_Business
             // todo
             string search1 = text_search.Text;
             string search2 = date_search.Text;
-            MessageBox.Show(search2);
+            // MessageBox.Show(search2);
+            tbSettingText.Content = "TODO";
         }
     }
 }
