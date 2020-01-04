@@ -58,9 +58,49 @@ namespace Verify_Your_Business
                 string responseString = response.Content.ReadAsStringAsync().Result;
                 JObject jObject = JObject.Parse(responseString);
 
-                string displayName = (string)jObject["result"]["subject"]["name"];
+                string name = (string)jObject["result"]["subject"]["name"];
+                string nip = (string)jObject["result"]["subject"]["nip"];
+                string statusVat = (string)jObject["result"]["subject"]["statusVat"];
+                string regon = (string)jObject["result"]["subject"]["regon"];
+                string pesel = (string)jObject["result"]["subject"]["pesel"];
+                string krs = (string)jObject["result"]["subject"]["krs"];
+                string residenceAddress = (string)jObject["result"]["subject"]["residenceAddress"];
+                string workingAddress = (string)jObject["result"]["subject"]["workingAddress"];
+                string representatives = string.Join("", jObject["result"]["subject"]["representatives"]);
+                string authorizedClerks = string.Join("", jObject["result"]["subject"]["authorizedClerks"]);
+                string partners = string.Join("", jObject["result"]["subject"]["partners"]);
+                string accountNumbers = string.Join("", jObject["result"]["subject"]["accountNumbers"]);
+                string registrationLegalDate = (string)jObject["result"]["subject"]["registrationLegalDate"];
+                string registrationDenialBasis = (string)jObject["result"]["subject"]["registrationDenialBasis"];
+                string registrationDenialDate = (string)jObject["result"]["subject"]["registrationDenialDate"];
+                string restorationBasis = (string)jObject["result"]["subject"]["restorationBasis"];
+                string restorationDate = (string)jObject["result"]["subject"]["restorationDate"];
+                string removalBasis = (string)jObject["result"]["subject"]["removalBasis"];
+                string removalDate = (string)jObject["result"]["subject"]["removalDate"];
+                
+                name = "Firma (nazwa) lub imię i nazwisko: " + name;
+                nip = "Numer, za pomocą którego podmiot został zidentyfikowany na potrzeby podatku, jeżeli taki numer został przyznany: " + nip;
+                statusVat = "Status podatnika (wg stanu na dzień sprawdzenia): " + statusVat;
+                regon = "Numer identyfikacyjny REGON, o ile został nadany: " + regon;
+                pesel = "Numer PESEL, o ile podmiot posiada:" + pesel;
+                krs = "Numer w Krajowym Rejestrze Sądowym, o ile został nadany: " + krs;
+                residenceAddress = "Adres siedziby – w przypadku podmiotu niebędącego osobą fizyczną: " + residenceAddress;
+                workingAddress = "Adres stałego miejsca prowadzenia działalności albo adres miejsca zamieszkania, w przypadku braku adresu stałego miejsca prowadzenia działalności - w odniesieniu do osoby fizycznej: " + workingAddress;
+                representatives = "Imiona i nazwiska prokurentów oraz ich numery identyfikacji podatkowej lub numery PESEL: " + representatives;
+                authorizedClerks = "Imiona i nazwiska osób wchodzących w skład organu uprawnionego do reprezentowania podmiotu oraz ich numery identyfikacji podatkowej lub numery PESEL: " + authorizedClerks;
+                partners = "Imię i nazwisko lub firma (nazwa) wspólnika oraz jego numer identyfikacji podatkowej lub numer PESEL: " + partners;
+                accountNumbers = "Numery rachunków rozliczeniowych lub imiennych rachunków w SKOK: " + accountNumbers;
+                registrationLegalDate = "Data rejestracji jako podatnika VAT: " + registrationLegalDate;
+                //  registrationDenialBasis = ": " + registrationDenialBasis;
+                registrationDenialDate = "Data odmowy rejestracji jako podatnika VAT Podstawa prawna odmowy rejestracji: " + registrationDenialDate;
+                // restorationBasis = ": " + restorationBasis;
+                restorationDate = "Data przywrócenia rejestracji jako podatnika VAT Podstawa prawna przywrócenia " + restorationDate;
+                removalBasis = "Data wykreślenia rejestracji jako podatnika VAT Podstawa prawna wykreślenia: " + removalBasis;
+                // removalDate = ": " + removalDate;
 
-                tbSettingText.Content = "Firma (nazwa) lub imię i nazwisko: " + displayName;
+                tbSettingText.Content = name + "\n" + nip + "\n" + statusVat + "\n" + regon + "\n" + pesel + "\n" + krs + "\n" + residenceAddress + "\n" 
+                    + workingAddress + "\n" + representatives + "\n" + authorizedClerks + "\n" + partners + "\n" + accountNumbers + "\n" + registrationLegalDate + "\n"
+                    + registrationDenialDate + "\n" + restorationDate + "\n" + removalBasis;
             }
             else
             {
