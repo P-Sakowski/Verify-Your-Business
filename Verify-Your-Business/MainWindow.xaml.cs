@@ -13,11 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+using System.Reflection;
+using Verify_Your_Business_Library;
+
+
 namespace Verify_Your_Business
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -28,10 +39,11 @@ namespace Verify_Your_Business
         private void Search(object sender, RoutedEventArgs e)
         {
             // todo
-            string search1 = text_search.Text;
+            string textSearch = text_search.Text;
             string search2 = date_search.Text;
-            // MessageBox.Show(search2);
-            tbSettingText.Content = "TODO";
+
+            ApiClient apiClient = new ApiClient(textSearch);
+            tbSettingText.Content += apiClient.content;
         }
     }
 }
