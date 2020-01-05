@@ -117,5 +117,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Verify-Your-Business-Library\Verify-Your-Business-Library.csproj">
+      <Project>{8da2a90e-ecc1-4881-8240-6b2f84167739}</Project>
+      <Name>Verify-Your-Business-Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
