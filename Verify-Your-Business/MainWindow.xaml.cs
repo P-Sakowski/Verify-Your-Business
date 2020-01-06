@@ -31,6 +31,7 @@ namespace Verify_Your_Business
 
     public partial class MainWindow : Window
     {
+        ApiClient apiClient;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,18 +43,30 @@ namespace Verify_Your_Business
             string textSearch = text_search.Text;
             string search2 = date_search.Text;
 
-            ApiClient apiClient = new ApiClient(textSearch);
+            apiClient = new ApiClient(textSearch);
             tbSettingText.Content += apiClient.content;
             if (tbSettingText.Content.ToString() != "")
             {
-                SaveButton.Visibility = Visibility.Visible;
+                SaveXMLButton.Visibility = Visibility.Visible;
+                SavePDFButton.Visibility = Visibility.Visible;
             }
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void SaveXMLButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchedResult result = new SearchedResult(tbSettingText.Content.ToString());
-            SaveXml.saveToXml(result, "SearchedResult.xml");
+            SaveXml.SaveToXml(apiClient.FormFieldsList, "SearchedResult.xml");
+        }
+
+        private void SavePDFButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SavePdf.SaveToPdf(apiClient.FormFieldsList, "SearchedResult.pdf");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
@@ -13,6 +12,7 @@ namespace Verify_Your_Business_Library
     {
         private const string URL = "https://wl-api.mf.gov.pl/api/search/nip/";
         public string content;
+        public List<FormBuilder.KeyValuePair<string, string>> FormFieldsList = new List<FormBuilder.KeyValuePair<string, string>>();
         // private string urlParameters = "7382154319?date=2019-09-02";
         public ApiClient(string textSearch)
         {
@@ -29,10 +29,11 @@ namespace Verify_Your_Business_Library
                 JObject jObject = JObject.Parse(responseString);
                 FormBuilder helper = new FormBuilder(jObject);
 
-                foreach (KeyValuePair<string, string> field in helper.FormFieldsList)
+                foreach (FormBuilder.KeyValuePair<string, string> field in helper.FormFieldsList)
                 {
                     content += field.Key + ": " + field.Value + "\n";
                 }
+                this.FormFieldsList = helper.FormFieldsList;
             }
             else
             {
