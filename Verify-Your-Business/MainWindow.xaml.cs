@@ -54,7 +54,14 @@ namespace Verify_Your_Business
 
         private void SaveXMLButton_Click(object sender, RoutedEventArgs e)
         {
-            SaveXml.SaveToXml(apiClient.FormFieldsList, "SearchedResult.xml");
+            try
+            {
+                SaveXml.SaveToXml(apiClient.FormFieldsList, "SearchedResult.xml");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SavePDFButton_Click(object sender, RoutedEventArgs e)
