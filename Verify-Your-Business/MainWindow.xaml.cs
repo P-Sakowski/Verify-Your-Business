@@ -44,6 +44,16 @@ namespace Verify_Your_Business
 
             ApiClient apiClient = new ApiClient(textSearch);
             tbSettingText.Content += apiClient.content;
+            if (tbSettingText.Content.ToString() != "")
+            {
+                SaveButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchedResult result = new SearchedResult(tbSettingText.Content.ToString());
+            SaveXml.saveToXml(result, "SearchedResult.xml");
         }
     }
 }
