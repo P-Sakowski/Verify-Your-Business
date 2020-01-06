@@ -16,9 +16,10 @@ namespace Verify_Your_Business_Library
         // private string urlParameters = "7382154319?date=2019-09-02";
         public ApiClient(string textSearch)
         {
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri(URL);
+            HttpClient client = new HttpClient
+            {
+                BaseAddress = new Uri(URL)
+            };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
