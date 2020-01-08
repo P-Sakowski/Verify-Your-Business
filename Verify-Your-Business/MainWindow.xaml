@@ -45,7 +45,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap">Verify Your Buisness</TextBlock>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap">Verify Your Business</TextBlock>
             <TextBlock Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline6TextBlock}" TextWrapping="Wrap">Aplikacja pozwalająca na określenie wiarygodności partnerów biznesowych.</TextBlock>
             <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="3" Grid.Column="0" Kind="Text" Foreground="White" />
             <ComboBox Margin="16 16 0 0" Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="Wybierz polę wyszukiwania" Name="Os">
@@ -70,7 +70,7 @@
                     </DockPanel>
                 </Button.Content>
             </Button>
-            <Label Margin="16 16 0 0" Grid.Row="8" Grid.ColumnSpan="3" Name="tbSettingText" Content=""></Label>
+            <TextBlock Margin="16 16 0 0" Grid.Row="8" Grid.ColumnSpan="3" Name="tbSettingText" TextWrapping="Wrap"></TextBlock>
             <Button Margin="16 16 0 0" Name="SaveXMLButton" Grid.Row="7" VerticalAlignment="Top" Click="SaveXMLButton_Click" Grid.ColumnSpan="2" Visibility="Hidden" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="5">
                 <DockPanel>
                     <materialDesign:PackIcon Kind="File" Foreground="White" />
