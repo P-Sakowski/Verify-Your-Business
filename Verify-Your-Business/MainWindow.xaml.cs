@@ -39,13 +39,12 @@ namespace Verify_Your_Business
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            // todo
             string textSearch = text_search.Text;
             string search2 = date_search.Text;
 
             apiClient = new ApiClient(textSearch);
-            tbSettingText.Content += apiClient.content;
-            if (tbSettingText.Content.ToString() != "")
+            tbSettingText.Text += apiClient.content;
+            if (tbSettingText.Text.ToString() != "")
             {
                 SaveXMLButton.Visibility = Visibility.Visible;
                 SavePDFButton.Visibility = Visibility.Visible;

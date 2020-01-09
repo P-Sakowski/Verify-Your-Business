@@ -5,39 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Verify_Your_Business"
         mc:Ignorable="d"
-        Title="Verify Your Business" Height="600" Width="800">
-    <Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Label Grid.ColumnSpan="4"  FontSize="13" Content="Wykaz podmiotów zarejestrowanych jako podatnicy VAT, niezarejestrowanych oraz wykreślonych i przywróconych do rejestru VAT." />
-        <Label Grid.Row="1" Grid.ColumnSpan="4"  FontSize="10" Content="Wybierz pole po którym chcesz wyszukać podatnika" />
-        <RadioButton Grid.Row="2" GroupName="Os" Content="Numer konta" IsChecked="True"/>
-        <RadioButton Grid.Row="3" GroupName="Os" Content="NIP" />
-        <RadioButton Grid.Row="4" GroupName="Os" Content="REGON" />
-        <RadioButton Grid.Row="5" GroupName="Os" Content="Nazwa podmiotu (min. 5 znaków)" />
-        <Label Grid.Row="6" Content="Wyszukaj" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="6" Grid.Column="1" Name="text_search" Margin="0,10,0,0"/>
-        <Label Grid.Row="7" Content="Data" Margin="0,10,0,0"/>
-        <DatePicker Grid.Row="7" Grid.Column="1" Name="date_search" Margin="0,10,0,0"/>
-        <Button Click="Search" Grid.ColumnSpan="2" Grid.Row="8" Content="Szukaj" Margin="0,10,0,0"/>
-        <Label Grid.Row="9" Name="tbSettingText" Content="" Margin="0,27,0,-27"></Label>
-        <Button Name="SaveXMLButton" Content="Zapisz rezultat do pliku XML" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="9" VerticalAlignment="Top" Width="196" Click="SaveXMLButton_Click" Visibility="Hidden" />
-        <Button Name="SavePDFButton" Content="Zapisz rezultat do pliku PDF" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="9" VerticalAlignment="Top" Width="188" Click="SavePDFButton_Click" Grid.Column="1" Visibility="Hidden"  />
-    </Grid>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Verify Your Business"
+        Width="800"
+        Height="600">
+    <ScrollViewer >
+        <Grid Margin="16" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap">Verify Your Business</TextBlock>
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline6TextBlock}" TextWrapping="Wrap">Aplikacja pozwalająca na określenie wiarygodności partnerów biznesowych.</TextBlock>
+            <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="3" Grid.Column="0" Kind="Text" Foreground="White" />
+            <ComboBox Margin="16 16 0 0" Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="Wybierz polę wyszukiwania" Name="Os">
+                <ComboBoxItem>Numer konta</ComboBoxItem>
+                <ComboBoxItem>NIP</ComboBoxItem>
+                <ComboBoxItem>REGON</ComboBoxItem>
+                <ComboBoxItem>Nazwa podmiotu (min. 5 znaków)</ComboBoxItem>
+            </ComboBox>
+            <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="4" Grid.Column="0" Kind="Comment" Foreground="White" />
+            <TextBox Margin="16 16 0 0" Grid.Row="4" Grid.Column="1" Name="text_search"
+                     materialDesign:HintAssist.Hint="Wpisz tekst">
+            </TextBox>
+            <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="5" Grid.Column="0" Kind="Event" Foreground="White" />
+            <DatePicker Margin="16 16 0 0" Grid.Row="5" Grid.Column="1" Name="date_search" materialDesign:HintAssist.Hint="Wybierz datę"/>
+            <Button Grid.Row="6" Grid.ColumnSpan="3" Margin="16 16 0 0" Click="Search" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Height="40"
+                            materialDesign:ButtonAssist.CornerRadius="5">
+                <Button.Content>
+                    <DockPanel>
+                        <materialDesign:PackIcon Kind="Search" Foreground="White" />
+                        <TextBlock>Szukaj</TextBlock>
+                    </DockPanel>
+                </Button.Content>
+            </Button>
+            <TextBlock Margin="16 16 0 0" Grid.Row="8" Grid.ColumnSpan="3" Name="tbSettingText" TextWrapping="Wrap"></TextBlock>
+            <Button Margin="16 16 0 0" Name="SaveXMLButton" Grid.Row="7" VerticalAlignment="Top" Click="SaveXMLButton_Click" Grid.ColumnSpan="2" Visibility="Hidden" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="5">
+                <DockPanel>
+                    <materialDesign:PackIcon Kind="File" Foreground="White" />
+                    <TextBlock>Zapisz rezultat do pliku XML</TextBlock>
+                </DockPanel>
+            </Button>
+            <Button Margin="16 16 0 16" Name="SavePDFButton" Grid.Row="7" VerticalAlignment="Top" Click="SavePDFButton_Click" Grid.Column="2" Visibility="Hidden" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ButtonAssist.CornerRadius="5">
+                <DockPanel>
+                    <materialDesign:PackIcon Kind="FilePdf" Foreground="White" />
+                    <TextBlock>Zapisz rezultat do pliku PDF</TextBlock>
+                </DockPanel>
+            </Button>
+
+        </Grid>
+    </ScrollViewer>
 </Window>
