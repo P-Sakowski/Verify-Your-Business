@@ -26,11 +26,11 @@ namespace Verify_Your_Business_Library
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            string typ = NIP;
+            string typ = REGON;
 
             if (type == "1")
             {
-                typ = REGON;
+                typ = NIP;
             }
 
             Console.WriteLine(typ);
