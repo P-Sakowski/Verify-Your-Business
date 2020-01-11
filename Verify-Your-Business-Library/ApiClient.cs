@@ -10,11 +10,14 @@ namespace Verify_Your_Business_Library
 {
     public class ApiClient
     {
-        private const string URL = "https://wl-api.mf.gov.pl/api/search/nip/";
+        private const string URL = "https://wl-api.mf.gov.pl/api/search/";
+        private const string NIP = "nip/";
+        private const string REGON = "regon/";
+
         public string content;
         public List<FormBuilder.KeyValuePair<string, string>> FormFieldsList = new List<FormBuilder.KeyValuePair<string, string>>();
         // private string urlParameters = "7382154319?date=2019-09-02";
-        public ApiClient(string textSearch)
+        public ApiClient(string textSearch, string type)
         {
             HttpClient client = new HttpClient
             {
@@ -23,7 +26,16 @@ namespace Verify_Your_Business_Library
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = client.GetAsync(textSearch + "?date=2019-09-02").Result;
+            string typ = NIP;
+
+            if (type == "1")
+            {
+                typ = REGON;
+            }
+
+            Console.WriteLine(typ);
+
+            HttpResponseMessage response = client.GetAsync(typ + textSearch + "?date=2019-09-02").Result;
             if (response.IsSuccessStatusCode)
             {
                 string responseString = response.Content.ReadAsStringAsync().Result;

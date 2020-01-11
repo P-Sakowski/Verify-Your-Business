@@ -41,8 +41,9 @@ namespace Verify_Your_Business
         {
             string textSearch = text_search.Text;
             string search2 = date_search.Text;
+            string selectType = Os.SelectedIndex.ToString();
 
-            apiClient = new ApiClient(textSearch);
+            apiClient = new ApiClient(textSearch, selectType);
             tbSettingText.Text += apiClient.content;
             if (tbSettingText.Text.ToString() != "")
             {

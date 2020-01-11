@@ -52,7 +52,6 @@
                 <ComboBoxItem>Numer konta</ComboBoxItem>
                 <ComboBoxItem>NIP</ComboBoxItem>
                 <ComboBoxItem>REGON</ComboBoxItem>
-                <ComboBoxItem>Nazwa podmiotu (min. 5 znaków)</ComboBoxItem>
             </ComboBox>
             <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="4" Grid.Column="0" Kind="Comment" Foreground="White" />
             <TextBox Margin="16 16 0 0" Grid.Row="4" Grid.Column="1" Name="text_search"
