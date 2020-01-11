@@ -49,7 +49,6 @@
             <TextBlock Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadline6TextBlock}" TextWrapping="Wrap">Aplikacja pozwalająca na określenie wiarygodności partnerów biznesowych.</TextBlock>
             <materialDesign:PackIcon Margin="16 24 0 0" Grid.Row="3" Grid.Column="0" Kind="Text" Foreground="White" />
             <ComboBox Margin="16 16 0 0" Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="Wybierz polę wyszukiwania" Name="Os">
-                <ComboBoxItem>Numer konta</ComboBoxItem>
                 <ComboBoxItem>NIP</ComboBoxItem>
                 <ComboBoxItem>REGON</ComboBoxItem>
             </ComboBox>
