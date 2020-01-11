@@ -44,6 +44,7 @@ namespace Verify_Your_Business
             string selectType = Os.SelectedIndex.ToString();
 
             apiClient = new ApiClient(textSearch, selectType);
+            tbSettingText.Text = "";
             tbSettingText.Text += apiClient.content;
             if (tbSettingText.Text.ToString() != "")
             {
