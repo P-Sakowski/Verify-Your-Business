@@ -2,6 +2,11 @@
 
 Aplikacja "Verify Your Business" pozwala na określenie wiarygodności partnerów biznesowych poprzez sprawdzanie statusu podatnika VAT oraz ogólnodostępnych danych płatników VAT, a także umożliwia weryfikację numeru konta bankowego.
 
+Korzystamy z API Wykazu podatników VAT udostępnionego przez Ministerstwo Finansów.
+https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat
+
+Adres produkcyjny API: https://wl-api.mf.gov.pl 
+
 ### Funkcje
 
 - metoda „search”– aby z niej skorzystać, wybierz jeden z parametrów: NIP, REGON oraz dzień, na jaki mają być wyświetlone informacje o podmiocie
@@ -16,6 +21,8 @@ Aplikacja "Verify Your Business" pozwala na określenie wiarygodności partneró
 * [Interfejs aplikacji](#interfejs)
 * [Generowanie PDF](#pdf)
 * [Generowanie XML](#xml)
+* [Stack technologiczny](#Biblioteki)
+* [Twórcy](#twórcy)
 * [Licencja](#licencja)
 	
 ### Instalacja
@@ -50,6 +57,19 @@ Funkcja umożliwająca wygenerowanie XML. <br>
 Gdy dane zostaną zaprezentowane w interfejsie aplikacji, kliknij `Zapisz rezultat do pliku XML`. Utworzony plik `XML` Zostanie zapisany w katalogu aplikacji. 
 
 ![alt text](resources/xml.png)
+
+## Biblioteki
+
+- MaterialDesignColors.1.2.2
+- MaterialDesignThemes.3.0.1
+- Newtonsoft.Json.12.0.3
+- PDFSharp.Charting.netstandard.1.3.1
+- PdfSharp.MigraDoc.DocumentObjectModel.netstandard.1.3.1
+- PdfSharp.MigraDoc.netstandard.1.3.1
+- PdfSharp.netstandard.1.3.1
+- System.Drawing.Common.4.5.0
+- System.Net.Http.2.0.20126.16343
+- System.Net.Http.Formatting.Extension.5.2.3.0
 
 ## Twórcy
 
