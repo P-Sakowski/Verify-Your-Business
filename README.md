@@ -9,34 +9,46 @@ Aplikacja "Verify Your Business" pozwala na określenie wiarygodności partneró
 - metodę uproszczoną „check”, która poprzez API skrócone będzie łączyła cię z wykazem po wprowadzeniu parametrów zapytania NIP LUB REGON
 - Gernerowanie PDF oraz XML z informacjami o podmiocie
 
-## Spis treści
-* [Informacje ogólne](#Verify-Your-Business)
+### Spis treści
+* [Informacje ogólne](#verify-Your-Business)
 * [Funkcje](#funkcje)
-* [Instalacja](#setup)
-
-## General info
-This project is simple Lorem ipsum dolor generator.
+* [Instalacja](#instalacja)
+* [Interfejs aplikacji](#interfejs)
+* [Generowanie PDF](#pdf)
+* [Generowanie XML](#xml)
+* [Licencja](#licencja)
 	
-## Technologies
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
-	
-## Setup
-To run this project, install it locally using npm:
+### Instalacja
+Aby włączyć aplikacje uruchom i przejdź przez instalator `Verify-Your-Business-Installer.exe`, a następnie kliknij w ikonę ukazaną na pulpicie.
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+### Interfejs
 
-Verify-Your-Business-Installer.exe
+Interfejs aplikacji pozwala w prosty sposób wprowadzić dane.
+- W pierwszym polu wybierz `NIP`/`REGON`
+- W drugim polu wpisz numer `NIP`/`REGON` w zależności pierwszego pola
+- W trzecim polu wybierz właściwą datę. Po kliknięciu w pole pojawi się kalendarz
+- Na koniec kliknij przycisk `Szukaj` 
+
+#### Interfejs aplikacji
 
 ![alt text](resources/main-window.png)
+
+#### Prezentowanie informacji o podatniku po prawidłowym wyszukaniu
+
 ![alt text](resources/mian-window-da.png)
+
+### PDF
+
+Funkcja umożliwająca wygenerowanie PDF. <br>
+Gdy dane zostaną zaprezentowane w interfejsie aplikacji, kliknij `Zapisz rezultat do pliku PDF`. Utworzony plik `PDF` Zostanie zapisany w katalogu aplikacji. 
+
 ![alt text](resources/pdf.png)
+
+### XML
+
+Funkcja umożliwająca wygenerowanie XML. <br>
+Gdy dane zostaną zaprezentowane w interfejsie aplikacji, kliknij `Zapisz rezultat do pliku XML`. Utworzony plik `XML` Zostanie zapisany w katalogu aplikacji. 
+
 ![alt text](resources/xml.png)
 
 ## Twórcy
